@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedAssist - Painel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 text-center text-xl font-semibold shadow">
+    🏥 MedAssist - Sistema de Consultas
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="flex-1 p-6">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-2xl font-bold mb-4 text-gray-700">Pacientes</h2>
+
+      <!-- Formulário -->
+      <div class="mb-4 flex flex-col md:flex-row gap-2">
+        <input id="nome" type="text" placeholder="Nome" class="border rounded p-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input id="email" type="email" placeholder="Email" class="border rounded p-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input id="telefone" type="text" placeholder="Telefone" class="border rounded p-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <button id="addPaciente" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          ➕ Adicionar
+        </button>
+      </div>
+
+      <!-- Tabela -->
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-gray-300 rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-gray-200 text-gray-700">
+              <th class="border p-2 text-left">ID</th>
+              <th class="border p-2 text-left">Nome</th>
+              <th class="border p-2 text-left">Email</th>
+              <th class="border p-2 text-left">Telefone</th>
+            </tr>
+          </thead>
+          <tbody id="listaPacientes">
+            <tr>
+              <td colspan="4" class="p-3 text-center text-gray-500">Carregando...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
